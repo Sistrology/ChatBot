@@ -1,0 +1,225 @@
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#EEEEFF, #C7C8FF);
+}
+
+.chatbot-poup {
+    position: relative;
+    width: 420px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+                0 32px 64px -84px rgba(0, 0, 0, 0.5);
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    background: #5350c4;
+    padding: 15px 22px;
+    justify-content: space-between;
+}
+
+.chat-header .header-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header-info .chatbot-logo {
+    height: 35px;
+    width: 35px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 6px;
+    color: #5350c4;
+    flex-shrink: 0;
+}
+.chatbot-logo i{
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+.header-info .logo-text {
+    color: aliceblue;
+    font-size: 1.31rem;
+    font-weight: 600;
+}
+
+.chat-header #close-chatbot {
+    border: none;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    font-size: 1.9rem;
+    cursor: pointer;
+    border-radius: 50px;
+    background: none;
+    transition: 0.2s ease;
+}
+
+.chat-header #close-chatbot:hover {
+    background: #3d39ac;
+}
+
+.chat-body {
+    padding: 25px 22px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    height: 400px;
+    margin-bottom: 82px;
+    overflow-y: auto;
+}
+
+.chat-body .message {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+}
+
+.chat-body .bot-message .bot-avatar {
+    height: 35px;
+    width: 35px;
+    padding: 6px;
+    color: #fff;
+    background-color: #5350c4;
+    border-radius: 50%;
+}
+.bot-avatar i{
+        margin-top: 3px;
+        margin-left: 3px;
+}
+.chat-body .user-message {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.chat-body .message .message-text {
+    padding: 12px 16px;
+    max-width: 75%;
+    font-size: 0.95rem;
+}
+
+.chat-body .bot-message .message-text {
+    background: #F2F2FF;
+    border-radius: 13px 13px 13px 3px;
+}
+
+.chat-body .user-message .message-text {
+    color: #F2F2FF;
+    background: #5350c4;
+    border-radius: 13px 13px 3px 13px;
+}
+
+.chat-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: #fff;
+    padding: 15px 22px 20px;
+}
+
+.chat-footer .chat-form {
+    display: flex;
+    align-items: center;
+    border-radius: 32px;
+    background-color: #fff;
+    outline: 1px solid #CCCCE5;
+}
+
+.chat-footer .message-input {
+    border: none;
+    outline: none;
+    height: 47px;
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 14px 0 13px 18px;
+    resize: none;
+}
+
+.chat-form .chat-controls {
+    display: flex;
+    height: 47px;
+    align-items: center;
+    padding-right: 6px;
+}
+
+.chat-form .chat-controls button {
+    height: 35px;
+    width: 35px;
+    border: none;
+    font-size: 1.15rem;
+    cursor: pointer;
+    color: #706db0; 
+    border-radius: 50%;
+    background: none;
+    transition: 0.2s ease;
+}
+
+.chat-form .chat-controls #send-message {
+    color: white;
+    background: #5350c4;
+    display: none;
+}
+
+.chat-form .message-input:valid ~ .chat-controls #send-message {
+    display: block;
+}
+
+.chat-form .chat-controls #send-message:hover {
+    background: #3d39ac;
+}
+.thinking-indicator {
+    display: flex;
+    gap: 4px;
+    padding-block: 15px;
+}
+
+.thinking-indicator .dot {
+    height: 7px;
+    width: 7px;
+    opacity: 0.7;
+    border-radius: 50%;
+    background: #6f6bC2;
+    animation: dotPulse 1.5s ease-in-out infinite;
+}
+
+.thinking-indicator .dot:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.thinking-indicator .dot:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.thinking-indicator .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes dotPulse {
+    0%, 44% {
+        transform: translateY(0);
+    }
+    28% {
+        opacity: 0.4;
+        transform: translateY(-4px);
+    }
+    44% {
+        opacity: 0.2;
+    }
+}
+::-webkit-scrollbar{
+    display: none;
+}

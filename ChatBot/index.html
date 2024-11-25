@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Linking Google Fonts for Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="chatbot-poup">
+        <!-- Chatbot header -->
+        <div class="chat-header">
+            <div class="header-info">
+                <div class="chatbot-logo">
+                    <i class="fa fa-commenting"></i>
+                </div>
+                <h2 class="logo-text">ChatBot</h2>
+            </div>
+            <button id="close-chatbot" class="fa-solid fa-arrow-down"></button>     
+        </div>
+
+        <!-- Chatbot body -->
+        <div class="chat-body">
+            <div class="message bot-message">
+                <div class="bot-avatar">
+                    <i class="fa fa-commenting"></i>
+                </div>
+                <div class="message-text">Hey there 👋 <br/> How can I help you today?</div>
+            </div>
+        </div>
+
+        <!-- Chatbot footer -->
+        <div class="chat-footer">
+            <form action="#" class="chat-form">
+                <textarea placeholder="Message..." class="message-input" required></textarea>
+                <div class="chat-controls">
+                    <button type="button" class="fa-regular fa-face-smile"></button>
+                    <input type="file" accept="images/*" id="file-input" hidden >
+                    <button type="button" id="file-upload" class="fa-solid fa-paperclip"></button>  
+                    <button type="submit" id="send-message" class="fa-solid fa-arrow-up"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
